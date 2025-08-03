@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 
-
 const HeroSection = () => {
   return (
     <section id="home" className="bg-green-800 text-white py-24 text-center px-4">
-        <img src="" alt="" />
+        
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
