@@ -18,7 +18,9 @@ const AboutSection = () => {
         transition={{ delay: 0.3, duration: 0.7 }}
         className="mt-6 max-w-3xl mx-auto text-center text-base sm:text-lg"
       >
-        Poultrywala by Ninjafarm is India’s first organized B2B digital marketplace for live broiler poultry trading. We connect contract poultry farming companies with verified poultry traders to enable seamless, secure, and transparent poultry transactions.
+        Poultrywala by Ninjafarm is India’s first organized B2B digital marketplace for live broiler poultry trading. We connect contract poultry farming companies with verified poultry traders to enable seamless, secure, transparent, and reliable platform for poultry transactions.
+
+        
       </motion.p>
     </section>
   );
