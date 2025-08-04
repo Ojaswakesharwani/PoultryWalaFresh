@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 border-b-2 border-yellow-400">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="max-w-8xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2 text-2xl font-bold text-green-800">
           <div className="flex items-center space-x-3">
@@ -37,9 +37,12 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 font-semibold text-green-900">
           <Link to="/" className="hover:border-b- border-yellow-400 pb-1 transition-all">Home</Link>
+          <Link to="/about" className="hover:border-b- border-yellow-400 pb-1 transition-all">About</Link>
           <Link to="/services" className="hover:border-b- border-yellow-400 pb-1 transition-all">Services</Link>
+          <Link to="/features" className="hover:border-b- border-yellow-400 pb-1 transition-all">features</Link>
           <Link to="/updates" className="hover:border-b- border-yellow-400 pb-1 transition-all">Updates</Link>
           <Link to="/registraion" className="hover:border-b- border-yellow-400 pb-1 transition-all">Registration</Link>
+
         </nav>
 
         {/* Mobile Menu Button */}
