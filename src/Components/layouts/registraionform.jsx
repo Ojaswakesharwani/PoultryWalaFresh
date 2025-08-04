@@ -14,27 +14,27 @@ const RegisterForm = () => {
   };
 
   return (
-    <section id="register" className="bg-gray-100 py-16 px-4 text-center">
-      <h2 className="text-3xl font-bold mb-6 text-green-800">रजिस्टर करें</h2>
+    <section id="register" className="bg-gray-100 py-16 px-4 h-[100vh] text-center">
+      <h2 className="text-3xl font-bold mb-6 text-green-800">Register your self</h2>
       <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto text-left">
         <input
           type="text"
           name="name"
-          placeholder="नाम"
+          placeholder="Name"
           onChange={handleChange}
           className="w-full p-3 rounded border border-gray-300"
         />
         <input
           type="tel"
           name="phone"
-          placeholder="फ़ोन नंबर"
+          placeholder="Phone"
           onChange={handleChange}
           className="w-full p-3 rounded border border-gray-300"
         />
         <input
           type="email"
           name="email"
-          placeholder="ईमेल"
+          placeholder="Email"
           onChange={handleChange}
           className="w-full p-3 rounded border border-gray-300"
         />

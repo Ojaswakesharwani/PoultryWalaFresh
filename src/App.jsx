@@ -2,9 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/layouts/navbar';
 import Footer from './Components/layouts/footer';
-import Home from './pages/home/home';
-import Register from './pages/register/registraionform';
-import Pricing from './pages/marketupdate/pricing';
+import Home from './Components/layouts/home';
+import Register from './Components/layouts/registraionform';
+import Pricing from './Components/layouts/pricing';
+import About from './Components/layouts/About'
 // import { AppProvider } from "./context/appcontext";
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
       <>
       <Navbar />
       <Home />
-      
+      <About />
       <Register />
       <Pricing />
       <Footer />
