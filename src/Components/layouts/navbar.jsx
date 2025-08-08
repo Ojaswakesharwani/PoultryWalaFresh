@@ -39,9 +39,9 @@ const Navbar = () => {
           <Link to="/" className="hover:border-b- border-yellow-400 pb-1 transition-all">Home</Link>
           <Link to="/about" className="hover:border-b- border-yellow-400 pb-1 transition-all">About</Link>
           <Link to="/services" className="hover:border-b- border-yellow-400 pb-1 transition-all">Services</Link>
-          <Link to="/features" className="hover:border-b- border-yellow-400 pb-1 transition-all">features</Link>
+          {/* <Link to="/features" className="hover:border-b- border-yellow-400 pb-1 transition-all">features</Link>
           <Link to="/updates" className="hover:border-b- border-yellow-400 pb-1 transition-all">Updates</Link>
-          <Link to="/registraion" className="hover:border-b- border-yellow-400 pb-1 transition-all">Registration</Link>
+          <Link to="/registraion" className="hover:border-b- border-yellow-400 pb-1 transition-all">Registration</Link> */}
 
         </nav>
 

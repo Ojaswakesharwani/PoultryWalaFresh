@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/layouts/navbar';
 import Footer from './Components/layouts/footer';
 import Home from './Components/layouts/home';
-import Register from './Components/layouts/registraionform';
+import Register from './Components/layouts/ReviewSection';
 import Pricing from './Components/layouts/pricing';
-import About from './Components/layouts/About'
+import About from './Components/layouts/Downloadinfo'
 // import { AppProvider } from "./context/appcontext";
 
 function App() {

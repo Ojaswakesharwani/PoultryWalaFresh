@@ -21,7 +21,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center md:text-left"
           >
             Transforming Poultry Trading <br className="hidden sm:block" /> with Technology
           </motion.h1>
