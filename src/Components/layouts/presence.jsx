@@ -4,7 +4,7 @@ import { MdReviews, MdOutlineRealEstateAgent } from "react-icons/md";
 import { IoMdPerson } from "react-icons/io";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
-const DownloadInfo = () => {
+const Presence = () => {
   return (
     <section className="min-h-screen bg-yellow-50 px-6 py-10">
       <div className="max-w-6xl mx-auto">
@@ -77,33 +77,10 @@ const DownloadInfo = () => {
           </div>
         </div>
 
-        {/* Bottom Progress Steps */}
-        <div className="mt-14">
-          <h2 className="text-2xl font-bold text-green-900">
-            Future of Poultry Trading
-          </h2>
-          <div className="flex items-center gap-6 mt-6 flex-wrap">
-            {[
-              "Sign Up",
-              "Get Verified",
-              "Connect & Connect & Trade",
-              "Track Deliveries",
-            ].map((step, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div className="bg-green-700 text-white p-2 rounded-full">
-                  <BsFillArrowRightCircleFill />
-                </div>
-                <span className="font-semibold text-green-900">{step}</span>
-                {index !== 3 && (
-                  <div className="w-12 h-[2px] bg-green-700"></div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+        {/*  */}
       </div>
     </section>
   );
 };
 
-export default DownloadInfo;
+export default Presence;

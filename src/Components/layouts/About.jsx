@@ -57,7 +57,7 @@ const AboutSection = () => {
           <img
             src={aboutImage}
             alt="About Poultrywala"
-            className="max-w-sm w-full object-contain"
+            className="max-w-7xl w-full object-contain"
           />
         </motion.div>
       </div>
