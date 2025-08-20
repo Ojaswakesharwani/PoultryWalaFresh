@@ -27,7 +27,7 @@ const ReviewsSection = () => {
       variants={containerVariants}
     >
       {/* Overlay for theme effect */}
-      <div className="absolute inset-0 bg-yellow-100 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-yellow-50 backdrop-blur-sm"></div>
 
       <motion.div
         className="relative bg-transparent shadow-lg rounded-lg p-6"

@@ -6,6 +6,8 @@ import Home from './Components/layouts/home';
 import Future from './Components/layouts/Future';
 import Presence from './Components/layouts/presence';
 import About from './Components/layouts/About'
+import Explore from './pages/Explore';
+import Services from './pages/Services';
 // import { AppProvider } from "./context/appcontext";
 
 function App() {
@@ -32,7 +34,8 @@ function App() {
         />
 
         {/* Dedicated pages */}
-        {/* <Route path="/explore" element={<Explore />} /> */}
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
 
       {/* Common Footer (always visible) */}
