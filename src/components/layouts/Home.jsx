@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import bgpic from "../../assets/hero-bg-img.jpg";
-import video from "../../assets/vidieoo.mp4";
+import video from "../../assets/Vidieoo.mp4";
 import { Link } from "react-router-dom";
 
 const Home = () => {
