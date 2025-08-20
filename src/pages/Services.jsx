@@ -6,6 +6,7 @@ import { FaTruck, FaCheckCircle, FaHandshake, FaMapMarkedAlt, FaStar } from "rea
 const Services = () => {
   return (
     <div className="w-full overflow-x-hidden">
+        
       {/* HERO */}
       <section className="relative  opacity-70  bg-green-200 text-white flex flex-col items-center justify-center px-4 py-6 text-center">
         <motion.h1

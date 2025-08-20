@@ -33,10 +33,10 @@ const Presence = () => {
               className="flex flex-wrap gap-4 mt-8"
             >
               <button className="bg-green-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-green-800 transition font-medium shadow">
-                <FaSignInAlt /> Sign Up
+                <FaSignInAlt /> Presence
               </button>
               <button className="bg-yellow-400 text-green-900 px-6 py-3 rounded-xl flex items-center gap-2 font-semibold hover:bg-yellow-500 transition shadow">
-                26 Age
+                App
               </button>
             </motion.div>
 
