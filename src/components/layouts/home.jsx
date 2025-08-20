@@ -3,7 +3,7 @@ import bgpic from "../../assets/hero-bg-img.jpg";
 import video from "../../assets/vidieoo.mp4";
 import { Link } from "react-router-dom";
 
-const HeroSection = () => {
+const Home = () => {
   return (
     <section className="relative w-full min-h-full height-screen overflow-hidden">
       {/* Background Image */}
@@ -102,4 +102,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Home;
