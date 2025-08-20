@@ -1,13 +1,14 @@
 import React from 'react';
 import {  Routes, Route } from 'react-router-dom';
-import Navbar from './components/layouts/navbar';
-import Footer from './components/layouts/footer';
-import Home from './components/layouts/home';
-import Future from './components/layouts/future';
-import Presence from './components/layouts/presence';
-import About from './components/layouts/About'
-import Explore from './pages/Explore';
-import Services from './pages/Services';
+import Navbar from './components/layouts/navbar.jsx';
+import Footer from './components/layouts/footer.jsx';
+import Home from './components/layouts/home.jsx';
+import Future from './components/layouts/future.jsx';
+import Presence from './components/layouts/presence.jsx';
+import About from './components/layouts/about.jsx';
+import Explore from './pages/Explore.jsx';
+import Services from './pages/Services.jsx';
+
 // import { AppProvider } from "./context/appcontext";
 
 function App() {
