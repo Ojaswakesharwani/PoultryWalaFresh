@@ -78,7 +78,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-            className="w-full max-w-xl aspect-w-16 aspecth-9 rounded-xl shadow-2xl overflow-hidden relative"
+            className="w-full max-w-3xl aspect-w-16 aspecth-12 rounded-xl shadow-2xl overflow-hidden relative"
           >
             {/* Transparent overlay on video */}
             <div className="absolute inset-0 bg-black/30 z-10 rounded-xl"></div>

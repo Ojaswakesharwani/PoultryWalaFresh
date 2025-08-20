@@ -8,8 +8,8 @@ import pic from "../../assets/App-1.png";
 
 const Presence = () => {
   return (
-    <section className="bg-yellow-50 px-6 py-16">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-yellow-50 px-6 py-6">
+      <div className="max-w-8xl mx-auto">
         {/* Grid Layout */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Info */}
