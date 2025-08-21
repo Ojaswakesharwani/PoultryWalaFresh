@@ -100,7 +100,7 @@ const ReviewsSection = () => {
                 “Poultrywala helped us double our trade efficiency”
               </p>
               <p className="text-yellow-200 text-xs mt-3 text-center">
-                Ravee, Micha <br /> // 1B 500g Stis
+                Ravee, Micha <br />  1B 500g Stis
               </p>
             </motion.div>
 
