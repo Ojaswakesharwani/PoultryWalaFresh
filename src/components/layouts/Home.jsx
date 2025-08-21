@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import bgpic from "../../assets/hero-bg-img.jpg";
-import video from "../../assets/Vidieoo.mp4";
+import video from "../../assets/vidieo1.mp4";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
       <div className="absolute inset-0 bg-green-900/70 z-0"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 lg:py-32 text-white">
+      <div className="relative z-10 flex flex-col lg:flex-row gap-5 items-center justify-between px-6 lg:px-10 py-16 lg:py-32 text-white">
         {/* Left Text Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           {/* Tagline */}
@@ -78,7 +78,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-            className="w-full max-w-3xl aspect-w-16 aspecth-12 rounded-xl shadow-2xl overflow-hidden relative"
+            className="w-full max-w-5xl aspect-w-18 aspecth-12 rounded-xl shadow-2xl overflow-hidden relative"
           >
             {/* Transparent overlay on video */}
             <div className="absolute inset-0 bg-black/30 z-10 rounded-xl"></div>
@@ -87,7 +87,7 @@ const Home = () => {
               initial={{ scale: 1.03 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="w-full h-full object-cover rounded-xl opacity-60"
+              className="w-full h-full object-cover rounded-xl opacity-110  z-10"
               autoPlay
               muted
               loop
