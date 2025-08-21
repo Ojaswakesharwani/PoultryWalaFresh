@@ -72,12 +72,7 @@ const Navbar = () => {
           >
             Home
           </Link>
-          <button
-            onClick={scrollToAbout}
-            className="block text-green-900 hover:text-green-700 w-full text-left"
-          >
-            About
-          </button>
+         
           <Link
             to="/services"
             className="block text-green-900 hover:text-green-700"
@@ -85,20 +80,7 @@ const Navbar = () => {
           >
             Services
           </Link>
-          <Link
-            to="/updates"
-            className="block text-green-900 hover:text-green-700"
-            onClick={() => setIsOpen(false)}
-          >
-            Updates
-          </Link>
-          <Link
-            to="/registraion"
-            className="block text-green-900 hover:text-green-700"
-            onClick={() => setIsOpen(false)}
-          >
-            Registration
-          </Link>
+         
           <Link
             to="/explore"
             className="block text-yellow-500 font-semibold text-lg pb-1 border-b-2 border-yellow-400"

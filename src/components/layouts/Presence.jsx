@@ -8,7 +8,7 @@ import pic from "../../assets/App-1.png";
 
 const Presence = () => {
   return (
-    <section className="bg-yellow-50 px-6 py-6">
+    <section className="bg-yellow-100 px-6 py-6">
       <div className="max-w-8xl mx-auto">
         {/* Grid Layout */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -35,7 +35,7 @@ const Presence = () => {
               <button className="bg-green-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-green-800 transition font-medium shadow">
                 <FaSignInAlt /> Presence
               </button>
-              <button className="bg-yellow-400 text-green-900 px-6 py-3 rounded-xl flex items-center gap-2 font-semibold hover:bg-yellow-500 transition shadow">
+              <button className="bg-amber-200 text-green-900 px-6 py-3 rounded-xl flex items-center gap-2 font-semibold hover:bg-amber-400 transition shadow">
                 App
               </button>
             </motion.div>
@@ -48,28 +48,28 @@ const Presence = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10"
             >
-              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-3 hover:bg-yellow-200 transition shadow-sm">
+              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
                 <MdOutlineRealEstateAgent className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Real Time Trading
                 </span>
               </div>
 
-              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-3 hover:bg-yellow-200 transition shadow-sm">
+              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
                 <IoMdPerson className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Verified Profiles
                 </span>
               </div>
 
-              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-3 hover:bg-yellow-200 transition shadow-sm">
+              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
                 <FaUserCheck className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Online Profiles
                 </span>
               </div>
 
-              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-3 hover:bg-yellow-200 transition shadow-sm">
+              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
                 <MdReviews className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   All Reviews{" "}
@@ -77,7 +77,7 @@ const Presence = () => {
                 </span>
               </div>
 
-              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-3 hover:bg-yellow-200 transition shadow-sm sm:col-span-2">
+              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm sm:col-span-2">
                 <FaFileContract className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Digital Contracts

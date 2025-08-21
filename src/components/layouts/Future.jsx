@@ -27,7 +27,7 @@ const ReviewsSection = () => {
       variants={containerVariants}
     >
       {/* Overlay for theme effect */}
-      <div className="absolute inset-0 bg-yellow-50 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-yellow-100 backdrop-blur-sm"></div>
 
       <motion.div
         className="relative bg-transparent shadow-lg rounded-lg p-6"
@@ -135,7 +135,7 @@ const ReviewsSection = () => {
               ].map((review, idx) => (
                 <motion.div
                   key={idx}
-                  className="bg-white/70 p-3 rounded-lg flex items-center justify-between hover:bg-green-600 hover:text-white hover:scale-[1.02] transition-transform"
+                  className="bg-white/70 p-3 rounded-lg flex items-center justify-between shadow-lg  hover:bg-green-600 hover:text-white hover:scale-[1.02] transition-transform"
                   variants={itemVariants}
                 >
                   <div className="flex items-center gap-3">

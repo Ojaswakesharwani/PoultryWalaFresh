@@ -13,7 +13,7 @@ const Home = () => {
       ></div>
 
       {/* Green Overlay */}
-      <div className="absolute inset-0 bg-green-900/70 z-0"></div>
+      <div className="absolute  inset-0 bg-green-900/70 z-10"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col lg:flex-row gap-5 items-center justify-between px-6 lg:px-10 py-16 lg:py-32 text-white">
@@ -62,7 +62,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}          >
             <Link
-              to="/explore"   // 👈 where you want to navigate
+              to="/explore"   // 👈 to navigate
               className="inline-block mt-8 px-8 py-4 bg-yellow-400 hover:bg-yellow-500 
                          text-green-900 font-bold rounded-lg shadow-lg 
                          transition-transform transform hover:scale-105"
@@ -87,7 +87,7 @@ const Home = () => {
               initial={{ scale: 1.03 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="w-full h-full object-cover rounded-xl opacity-110  z-10"
+              className="w-full h-full object-cover rounded-xl opacity-100  z-100"
               autoPlay
               muted
               loop
