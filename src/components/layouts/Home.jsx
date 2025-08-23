@@ -1,9 +1,16 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import bgpic from "../../assets/hero-bg-img.jpg";
 import video from "../../assets/vidieo1.mp4";
 import { Link } from "react-router-dom";
+import Modal from "../../components/layouts/Modal";   // ✅ Modal component
+import Registration from "../../pages/Registration"; // ✅ Registration component
 
 const Home = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const closeModal = () => setOpenModal(false); // Function to close modal  
+  
+
   return (
     <section className="relative w-full min-h-full height-screen overflow-hidden">
       {/* Background Image */}
@@ -13,12 +20,14 @@ const Home = () => {
       ></div>
 
       {/* Green Overlay */}
-      <div className="absolute  inset-0 bg-green-900/70 z-10"></div>
+      <div className="absolute inset-0 bg-green-900/70 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row gap-5 items-center justify-between px-6 lg:px-10 py-16 lg:py-32 text-white">
+      <div className="relative z-10 flex flex-col lg:flex-row gap-5 items-center justify-between px-6 lg:px-10 py-10 lg:py-22 text-white">
+        
         {/* Left Text Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
+          
           {/* Tagline */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -49,27 +58,45 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
-            className="mt-6 text-gray-100 text-semibase sm:text-lg leading-relaxed"
+            className="mt-6 text-gray-100 sm:text-lg leading-relaxed"
           >
             India’s first organized B2B platform for contract broiler trading –
             <br />
             Connecting verified poultry traders.
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.button
+          {/* CTA Buttons */}
+          <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}          >
+            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+            className="mt-8"
+          >
+            {/* Explore Button */}
             <Link
-              to="/explore"   // 👈 to navigate
-              className="inline-block mt-8 px-8 py-4 bg-yellow-400 hover:bg-yellow-500 
+              to="/explore"
+              className="inline-block px-8 py-4 bg-yellow-400 hover:bg-yellow-500 
                          text-green-900 font-bold rounded-lg shadow-lg 
                          transition-transform transform hover:scale-105"
             >
-            Explore Platform
+              Explore Platform
             </Link>
-          </motion.button>
+
+            {/* Extra Text + Register Button */}
+            <div className="mt-6">
+              <p className="text-gray-200 text-lg font-medium mb-3">
+                For getting latest updates, register yourself:
+              </p>
+              <button
+                onClick={() => setOpenModal(true)}
+                className="inline-block px-6 py-3 bg-green-600 hover:bg-green-700 
+                           text-white font-semibold rounded-lg shadow-md 
+                           transition-transform transform hover:scale-105"
+              >
+                Register Now
+              </button>
+            </div>
+          </motion.div>
         </div>
 
         {/* Right Section - Transparent Video */}
@@ -87,7 +114,7 @@ const Home = () => {
               initial={{ scale: 1.03 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="w-full h-full object-cover rounded-xl opacity-100  z-100"
+              className="w-full h-full object-cover rounded-xl opacity-100 z-100"
               autoPlay
               muted
               loop
@@ -98,6 +125,11 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* ✅ Modal with Registration form */}
+      <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+        <Registration />
+      </Modal>
     </section>
   );
 };

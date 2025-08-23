@@ -1,7 +1,6 @@
 import React, { useState } from "react";   // ✅ fixed import
-import Modal from "../components/layouts/Models";   // ✅ added missing Modal import
-import TraderRegistration from "../components/layouts/TraderRegistration";
-import BuyerRegistration from "../components/layouts/BuyerRegistration";
+import Modal from "../components/layouts/Modal";   // ✅ added missing Modal import
+import Registration from "./Registration"
 
 // Sample data for traders — later you can fetch from API
 const traders = [
@@ -44,8 +43,15 @@ const traders = [
 ];
 
 const Explore = () => {
-  const [openModal, setOpenModal] = useState(null); // "trader", "buyer", or null
 
+
+  
+    const [openModal, setOpenModal] = useState(false);
+    const closeModal = () => setOpenModal(false); // Function to close modal  
+
+
+
+    
   return (
     <div className="min-h-screen bg-yellow-50">
       {/* Header Section */}
@@ -167,10 +173,10 @@ const Explore = () => {
         </div>
       </div>
 
-      {/* ✅ Modal */}
+      {/* ✅ Modal with the registration form */}
       <Modal isOpen={openModal !== null} onClose={() => setOpenModal(null)}>
-        {openModal === "trader" && <TraderRegistration />}
-        {openModal === "buyer" && <BuyerRegistration />}
+        {openModal === "trader" && <Registration />}
+        {openModal === "buyer" && <Registration />}
       </Modal>
     </div>
   );

@@ -20,7 +20,7 @@ const ReviewsSection = () => {
   return (
     <motion.section
       className="relative w-full min-h-full py-8 px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('https://picsum.photos/1920/1080?blur=2')` }} // dummy bg (safe to replace)
+      style={{ backgroundImage: `url('https://picsum.photos/1920/1080?blur=2')` }} // dummy bg
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

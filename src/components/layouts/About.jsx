@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutImage from "../../assets/hero-bg.jpg"; // Replace with your PNG/SVG path
+import aboutImage from "../../assets/hero-bg.jpg"; 
 
 const AboutSection = () => {
   return (

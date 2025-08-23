@@ -1,9 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaTruck, FaCheckCircle, FaHandshake, FaMapMarkedAlt, FaStar } from "react-icons/fa";
+import { useState } from "react";
+import Modal from "../components/layouts/Modal";
+import Registration from "./Registration";
 
 
 const Services = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const closeModal = () => setOpenModal(false); // Function for closing modal  
+  
+
   return (
     <div className="w-full overflow-x-hidden">
         
@@ -96,10 +103,16 @@ const Services = () => {
         <p className="max-w-2xl mx-auto mb-8 font-semibold text-gray-950 text-lg">
           Join thousands of buyers, farmers, and traders who trust Poultrywala for reliable poultry trading.
         </p>
-        <button className="bg-yellow-400 text-green-900 px-8 py-4 rounded-lg font-bold hover:scale-105 active:scale-95 hover:bg-yellow-500 transition">
-          Sign Up Now
+        <button
+        onClick={() => setOpenModal(true)}
+        className="bg-yellow-400 text-green-900 px-8 py-4 rounded-lg font-bold hover:scale-105 active:scale-95 hover:bg-yellow-500 transition">
+          Register Now
         </button>
       </section>
+      {/* ✅ Modal with Registration form */}
+      <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+        <Registration />
+      </Modal>
     </div>
   );
 };
