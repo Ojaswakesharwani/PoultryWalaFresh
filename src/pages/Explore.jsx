@@ -1,6 +1,6 @@
-import React, { useState } from "react";   // ✅ fixed import
-import Modal from "../components/layouts/Modal";   // ✅ added missing Modal import
-import Registration from "./Registration"
+import React, { useState } from "react";
+import Modal from "../components/layouts/Modal";
+import Registration from "./Registration";
 
 // Sample data for traders — later you can fetch from API
 const traders = [
@@ -43,53 +43,68 @@ const traders = [
 ];
 
 const Explore = () => {
+  const [openModal, setOpenModal] = useState(null); // ✅ fixed
+  const closeModal = () => setOpenModal(null);
 
-
-  
-    const [openModal, setOpenModal] = useState(false);
-    const closeModal = () => setOpenModal(false); // Function to close modal  
-
-
-
-    
   return (
-    <div className="min-h-screen bg-yellow-50">
+    <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-green-50">
       {/* Header Section */}
-      <div className="bg-green-600/90 text-yellow-100 py-8 px-4 text-center shadow-md">
-        <h1 className="text-3xl md:text-4xl font-bold">Explore Poultry Traders</h1>
-        <p className="mt-2 text-amber-200 max-w-2xl mx-auto">
-          Compare trusted poultry suppliers, check today’s prices, and connect instantly.
+      <div className="bg-gradient-to-r from-green-700 to-green-600 text-yellow-100 py-12 px-6 text-center shadow-lg">
+        <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-md">
+          Explore Poultry Traders
+        </h1>
+        <p className="mt-3 text-amber-200 max-w-2xl mx-auto text-lg">
+          Compare trusted suppliers, check today’s prices, and connect instantly.
         </p>
       </div>
 
       {/* Table Section */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="overflow-x-auto shadow-md rounded-lg border border-green-950">
-          <table className="min-w-full text-sm text-left shadow-2xl">
-            <thead className="bg-green-700 text-white sticky border-green-950 top-0">
+      <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="overflow-x-auto rounded-xl shadow-lg border border-green-200">
+          <table className="min-w-full text-sm text-left rounded-xl overflow-hidden">
+            <thead className="bg-green-700 text-white sticky top-0">
               <tr>
-                <th className="py-3 px-4">S. No.</th>
-                <th className="py-3 px-4">Supplier Name</th>
-                <th className="py-3 px-4">Company</th>
-                <th className="py-3 px-4">Location</th>
-                <th className="py-3 px-4">Today’s Price</th>
-                <th className="py-3 px-4">Contact</th>
-                <th className="py-3 px-4">Rating</th>
+                {[
+                  "S. No.",
+                  "Supplier Name",
+                  "Company",
+                  "Location",
+                  "Today’s Price",
+                  "Contact",
+                  "Rating",
+                ].map((header) => (
+                  <th
+                    key={header}
+                    className="py-4 px-5 font-semibold text-sm uppercase tracking-wide"
+                  >
+                    {header}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
-              {traders.map((trader) => (
+              {traders.map((trader, i) => (
                 <tr
                   key={trader.id}
-                  className="even:bg-green-100 bg-amber-100 border-green-950 border-1 hover:bg-green-600/60 transition"
+                  className="even:bg-green-50 odd:bg-yellow-50 hover:bg-green-100 transition-all border-b border-green-100"
                 >
-                  <td className="py-3 px-4 font-medium">{trader.id}</td>
-                  <td className="py-3 px-4 font-semibold text-green-900">{trader.name}</td>
-                  <td className="py-3 px-4">{trader.company}</td>
-                  <td className="py-3 px-4">{trader.location}</td>
-                  <td className="py-3 px-4 text-yellow-600 font-bold">{trader.todayPrice}</td>
-                  <td className="py-3 px-4">{trader.contact}</td>
-                  <td className="py-3 px-4">{trader.rating} ⭐</td>
+                  <td className="py-3 px-5 font-medium text-gray-700">
+                    {i + 1}
+                  </td>
+                  <td className="py-3 px-5 font-bold text-green-900">
+                    {trader.name}
+                  </td>
+                  <td className="py-3 px-5">{trader.company}</td>
+                  <td className="py-3 px-5">{trader.location}</td>
+                  <td className="py-3 px-5 text-yellow-700 font-bold">
+                    {trader.todayPrice}
+                  </td>
+                  <td className="py-3 px-5 text-gray-700">
+                    📞 {trader.contact}
+                  </td>
+                  <td className="py-3 px-5 text-green-700 font-medium">
+                    ⭐ {trader.rating}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -98,28 +113,35 @@ const Explore = () => {
       </div>
 
       {/* Why Use Explore Section */}
-      <div className="max-w-4xl mx-auto px-4 py-10 bg-green-600/80 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-yellow-100 mb-3">Why Use Explore?</h2>
-        <p className="text-yellow-50 leading-relaxed">
-          The <b>Explore</b> section gives you up-to-date prices from verified poultry traders. 
-          Compare suppliers, check ratings, and connect directly. Whether you run a farm, 
-          business, or are just buying for your family, this tool helps you make smart 
-          purchasing decisions with confidence.
+      <div className="max-w-4xl mx-auto px-6 py-12 bg-green-600/90 rounded-xl shadow-md text-center">
+        <h2 className="text-2xl font-bold text-yellow-100 mb-4">
+          Why Use Explore?
+        </h2>
+        <p className="text-yellow-50 leading-relaxed text-lg">
+          The <b>Explore</b> section gives you real-time prices from{" "}
+          <span className="underline">verified poultry traders</span>. Compare
+          suppliers, check ratings, and connect directly with confidence.
         </p>
       </div>
 
       {/* Company Directory Section */}
-      <div className="max-w-6xl mx-auto px-4 py-10">
-        <h2 className="text-2xl font-bold text-green-900 mb-6">Company Directory</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-3xl font-bold text-green-900 mb-8 text-center">
+          Company Directory
+        </h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {traders.map((trader) => (
             <div
               key={trader.id}
-              className="bg-white border border-green-200 hover:bg-green-500/70 rounded-lg shadow-md p-5 hover:shadow-lg transition"
+              className="bg-white border border-green-200 rounded-xl shadow hover:shadow-xl p-6 transition-all transform hover:-translate-y-1"
             >
-              <h3 className="text-lg font-bold text-green-800">{trader.company}</h3>
+              <h3 className="text-lg font-bold text-green-800">
+                {trader.company}
+              </h3>
               <p className="text-sm text-gray-600">{trader.location}</p>
-              <p className="mt-2 text-yellow-700 font-semibold">{trader.todayPrice}</p>
+              <p className="mt-2 text-yellow-700 font-semibold">
+                {trader.todayPrice}
+              </p>
               <p className="text-sm mt-1">📞 {trader.contact}</p>
               <p className="text-sm text-green-600">⭐ {trader.rating}</p>
             </div>
@@ -128,43 +150,41 @@ const Explore = () => {
       </div>
 
       {/* Call to Action Section */}
-      <div className="bg-green-700 text-white py-16 px-6">
+      <div className="bg-gradient-to-r from-green-700 to-green-800 text-white py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-5">
             Be a Part of India’s Trusted Poultry Marketplace
           </h2>
-          <p className="text-amber-200 max-w-2xl mx-auto mb-10">
-            Whether you are a <b>supplier</b> looking to sell your poultry products or a <b>buyer</b> 
-            searching for the best deals, join our growing network today and connect with verified partners.
+          <p className="text-amber-200 max-w-2xl mx-auto mb-10 text-lg">
+            Whether you are a <b>supplier</b> or a <b>buyer</b>, join our
+            growing network and connect with verified partners today.
           </p>
 
           {/* Two registration cards */}
           <div className="grid md:grid-cols-2 gap-8 mt-6">
-            {/* Trader Registration */}
-            <div className="bg-yellow-100 text-green-900 rounded-lg shadow-md p-8 hover:shadow-lg transition">
+            <div className="bg-yellow-100 text-green-900 rounded-xl shadow-md p-8 hover:shadow-lg transition">
               <h3 className="text-xl font-bold mb-3">📦 Register as a Trader</h3>
-              <p className="mb-5 text-gray-700 leading-relaxed">
-                List your company in our trusted poultry directory. Reach thousands of 
-                potential buyers, showcase your daily prices, and grow your business with confidence.
+              <p className="mb-5 text-gray-700">
+                List your company, showcase daily prices, and reach thousands of
+                buyers.
               </p>
               <button
                 onClick={() => setOpenModal("trader")}
-                className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow"
+                className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow transition"
               >
                 Register as Trader
               </button>
             </div>
 
-            {/* Buyer Registration */}
-            <div className="bg-yellow-100 text-green-900 rounded-lg shadow-md p-8 hover:shadow-lg transition">
+            <div className="bg-yellow-100 text-green-900 rounded-xl shadow-md p-8 hover:shadow-lg transition">
               <h3 className="text-xl font-bold mb-3">🛒 Register as a Buyer</h3>
-              <p className="mb-5 text-gray-700 leading-relaxed">
-                Looking to purchase poultry at the best prices? Get access to verified traders, 
-                compare rates instantly, and connect directly with suppliers near you.
+              <p className="mb-5 text-gray-700">
+                Access verified traders, compare rates instantly, and connect
+                directly.
               </p>
               <button
                 onClick={() => setOpenModal("buyer")}
-                className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold rounded-lg shadow"
+                className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold rounded-lg shadow transition"
               >
                 Register as Buyer
               </button>
@@ -173,8 +193,8 @@ const Explore = () => {
         </div>
       </div>
 
-      {/* ✅ Modal with the registration form */}
-      <Modal isOpen={openModal !== null} onClose={() => setOpenModal(null)}>
+      {/* ✅ Modal with registration form */}
+      <Modal isOpen={openModal !== null} onClose={closeModal}>
         {openModal === "trader" && <Registration />}
         {openModal === "buyer" && <Registration />}
       </Modal>
