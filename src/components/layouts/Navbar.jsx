@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"; 
 import { Menu, X } from "lucide-react";
-import icon from "../../assets/Fevicon.png";
+import icon from "../../assets/logonew.png";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
@@ -20,12 +20,12 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 border-b-2 border-yellow-400">
-      <div className="max-w-8xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="max-w-8xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2 text-2xl font-bold text-green-800">
           <div className="flex items-center space-x-3">
-            <img src={icon} alt="Poultrywala icon" className="w-10 h-10 object-contain" />
-            <img src={logo} alt="Poultrywala logo" className="h-6 sm:h-8 md:h-9 object-contain" />
+            <img src={icon} alt="Poultrywala icon" className="w-full h-12 object-contain" />
+            {/* <img src={logo} alt="Poultrywala logo" className="h-6 sm:h-8 md:h-9 object-contain" /> */}
           </div>
         </div>
 

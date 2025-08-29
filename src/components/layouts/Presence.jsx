@@ -1,17 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaSignInAlt, FaUserCheck, FaFileContract } from "react-icons/fa";
+import { FaUserCheck, FaFileContract } from "react-icons/fa";
 import { MdReviews, MdOutlineRealEstateAgent } from "react-icons/md";
 import { IoMdPerson } from "react-icons/io";
 import img from "../../assets/App.png";
-import pic from "../../assets/App-1.png";
+import pic from "../../assets/Appplay.png";
 
 const Presence = () => {
   return (
-    <section className="bg-yellow-100 px-6 py-6">
-      <div className="max-w-8xl mx-auto">
+    <section className="bg-gradient-to-b from-yellow-50 to-green-50 px-6 py-14">
+      <div className="max-w-7xl mx-auto">
         {/* Grid Layout */}
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-14">
           {/* Left Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -24,52 +24,36 @@ const Presence = () => {
               10K+ Downloads <br /> on Android & iOS
             </h1>
 
-            {/* Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              viewport={{ once: true }}
-              className="flex flex-wrap gap-4 mt-8"
-            >
-              <button className="bg-green-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-green-800 transition font-medium shadow">
-                <FaSignInAlt /> Presence
-              </button>
-              <button className="bg-amber-200 text-green-900 px-6 py-3 rounded-xl flex items-center gap-2 font-semibold hover:bg-amber-400 transition shadow">
-                App
-              </button>
-            </motion.div>
-
             {/* Features Grid */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.9 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10"
             >
-              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
+              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-4 hover:bg-yellow-200 transition-all shadow-md">
                 <MdOutlineRealEstateAgent className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Real Time Trading
                 </span>
               </div>
 
-              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
+              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-4 hover:bg-yellow-200 transition-all shadow-md">
                 <IoMdPerson className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Verified Profiles
                 </span>
               </div>
 
-              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
+              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-4 hover:bg-yellow-200 transition-all shadow-md">
                 <FaUserCheck className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Online Profiles
                 </span>
               </div>
 
-              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm">
+              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-4 hover:bg-yellow-200 transition-all shadow-md">
                 <MdReviews className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   All Reviews{" "}
@@ -77,7 +61,7 @@ const Presence = () => {
                 </span>
               </div>
 
-              <div className="bg-amber-200 p-5 rounded-xl flex items-center gap-3 hover:bg-amber-400 transition shadow-sm sm:col-span-2">
+              <div className="bg-yellow-100 p-5 rounded-xl flex items-center gap-4 hover:bg-yellow-200 transition-all shadow-md sm:col-span-2">
                 <FaFileContract className="text-green-700 text-2xl" />
                 <span className="font-semibold text-green-900">
                   Digital Contracts
@@ -94,14 +78,14 @@ const Presence = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 flex justify-center gap-6"
           >
-            <div className="relative p-2 rounded-2xl shadow-xl bg-white w-1/2 max-w-xs">
+            <div className="relative p-3 rounded-2xl shadow-lg bg-white w-1/2 max-w-xs hover:scale-105 transition-transform">
               <img
                 src={img}
                 className="w-full h-auto object-contain rounded-lg"
                 alt="App preview"
               />
             </div>
-            <div className="relative p-2 rounded-2xl shadow-xl bg-white w-1/2 max-w-xs">
+            <div className="relative p-3 rounded-2xl shadow-lg bg-white w-1/2 max-w-xs hover:scale-105 transition-transform">
               <img
                 src={pic}
                 className="w-full h-auto object-contain rounded-lg"

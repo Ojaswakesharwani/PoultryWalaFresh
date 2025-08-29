@@ -8,7 +8,7 @@ const statesWithCities = {
   "Punjab": ["Amritsar", "Ludhiana", "Jalandhar"],
 };
 
-function RegistrationForm() {
+function Registration() {
   const [formData, setFormData] = useState({
     Name: "",
     Phone: "",
@@ -169,4 +169,4 @@ function RegistrationForm() {
   );
 }
 
-export default RegistrationForm;
+export default Registration;

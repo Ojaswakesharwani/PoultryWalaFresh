@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import bgpic from "../../assets/hero-bg-img.jpg";
 import video from "../../assets/vidieo1.mp4";
 import { Link } from "react-router-dom";
-import Modal from "../../components/layouts/Modal";   // ✅ Modal component
-import Registration from "../../pages/Registration"; // ✅ Registration component
+import Modal from "../../components/layouts/Modal";   
+import Registration from "./Registration.jsx";
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -20,7 +20,7 @@ const Home = () => {
       ></div>
 
       {/* Green Overlay */}
-      <div className="absolute inset-0 bg-green-900/70 z-10"></div>
+      <div className="absolute inset-0 bg-green-900/60 z-10"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col lg:flex-row gap-5 items-center justify-between px-6 lg:px-10 py-10 lg:py-22 text-white">
@@ -73,14 +73,14 @@ const Home = () => {
             className="mt-8"
           >
             {/* Explore Button */}
-            <Link
+            {/* <Link
               to="/explore"
               className="inline-block px-8 py-4 bg-yellow-400 hover:bg-yellow-500 
                          text-green-900 font-bold rounded-lg shadow-lg 
                          transition-transform transform hover:scale-105"
             >
               Explore Platform
-            </Link>
+            </Link> */}
 
             {/* Extra Text + Register Button */}
             <div className="mt-6">
@@ -89,8 +89,8 @@ const Home = () => {
               </p>
               <button
                 onClick={() => setOpenModal(true)}
-                className="inline-block px-6 py-3 bg-green-600 hover:bg-green-700 
-                           text-white font-semibold rounded-lg shadow-md 
+                className="inline-block px-10 py-4 bg-yellow-400 hover:bg-yellow-500 
+                           text-green-900 font-bold rounded-lg shadow-md 
                            transition-transform transform hover:scale-105"
               >
                 Register Now
