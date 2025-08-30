@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import aboutImage from "../../assets/hero.png"; 
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full bg-white text-black px-6 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -14,7 +17,7 @@ const AboutSection = () => {
             transition={{ duration: 0.7 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold"
           >
-            About Us
+            {t("about.heading")}
           </motion.h2>
 
           <motion.p
@@ -23,10 +26,7 @@ const AboutSection = () => {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="mt-6 text-base sm:text-lg leading-relaxed text-gray-700"
           >
-            Poultrywala by Ninjafarm is India’s first organized B2B digital marketplace 
-            for live broiler poultry trading. We connect contract poultry farming 
-            companies with verified poultry traders to enable seamless, secure, transparent, 
-            and reliable transactions.
+            {t("about.description")}
           </motion.p>
 
           <motion.div
@@ -36,19 +36,19 @@ const AboutSection = () => {
             className="mt-8 flex flex-wrap gap-4"
           >
             <div className="bg-green-100 px-4 py-2 rounded-lg text-green-800 font-semibold shadow">
-              Verified Profiles
+              {t("about.features.verified")}
             </div>
             <div className="bg-yellow-100 px-4 py-2 rounded-lg text-yellow-800 font-semibold shadow">
-              Real Time Trading
+              {t("about.features.trading")}
             </div>
             <div className="bg-blue-100 px-4 py-2 rounded-lg text-blue-800 font-semibold shadow">
-              Digital Contracts
+              {t("about.features.contracts")}
             </div>
             <div className="bg-red-100 px-4 py-2 rounded-lg text-red-800 font-semibold shadow">
-              Daily Rates
+              {t("about.features.rates")}
             </div>
             <div className="bg-pink-100 px-4 py-2 rounded-lg text-pink-800 font-semibold shadow">
-              Order Poultry
+              {t("about.features.order")}
             </div>
           </motion.div>
         </div>
@@ -62,7 +62,7 @@ const AboutSection = () => {
         >
           <img
             src={aboutImage}
-            alt="About Poultrywala"
+            alt={t("about.imageAlt")}
             className="max-w-7xl w-full object-contain"
           />
         </motion.div>

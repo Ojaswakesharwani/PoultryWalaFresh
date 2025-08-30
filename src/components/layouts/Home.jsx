@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";  // ✅ add
 import bgpic from "../../assets/hero-bg-img.jpg";
 import video from "../../assets/vidieo1.mp4";
-import { Link } from "react-router-dom";
 import Modal from "../../components/layouts/Modal";   
 import Registration from "./Registration.jsx";
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
-  const closeModal = () => setOpenModal(false); // Function to close modal  
-  
+  const { t } = useTranslation(); // ✅ useTranslation hook
+  const closeModal = () => setOpenModal(false);  
 
   return (
-    <section className="relative w-full min-h-full height-screen overflow-hidden">
+    <section id="home-section" className="relative w-full max-h-screen px-5 py-12 min-h-full height-screen overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0"
@@ -36,10 +36,10 @@ const Home = () => {
             className="mb-4"
           >
             <p className="text-orange-300 font-semibold text-5xl sm:text-4xl tracking-wide">
-              India’s No.1 Poultry Trading Hub
+              {t("home.tagline")} {/* ✅ */}
             </p>
             <p className="text-gray-200 text-lg sm:text-2xl font-semibold mt-2">
-              Smart Trading • Secure Deals • Strong Network
+              {t("home.subTagline")} {/* ✅ */}
             </p>
           </motion.div>
 
@@ -50,7 +50,7 @@ const Home = () => {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="text-3xl sm:text-5xl md:text-5xl font-bold leading-snug mt-4"
           >
-            Transforming Poultry Trading <br className="hidden sm:block" /> with Technology
+            {t("home.heading")} {/* ✅ */}
           </motion.h1>
 
           {/* Subtext */}
@@ -60,9 +60,7 @@ const Home = () => {
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
             className="mt-6 text-gray-100 sm:text-lg leading-relaxed"
           >
-            India’s first organized B2B platform for contract broiler trading –
-            <br />
-            Connecting verified poultry traders.
+            {t("home.subtext")} {/* ✅ */}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -72,20 +70,9 @@ const Home = () => {
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             className="mt-8"
           >
-            {/* Explore Button */}
-            {/* <Link
-              to="/explore"
-              className="inline-block px-8 py-4 bg-yellow-400 hover:bg-yellow-500 
-                         text-green-900 font-bold rounded-lg shadow-lg 
-                         transition-transform transform hover:scale-105"
-            >
-              Explore Platform
-            </Link> */}
-
-            {/* Extra Text + Register Button */}
             <div className="mt-6">
               <p className="text-gray-200 text-lg font-medium mb-3">
-                For getting latest updates, register yourself:
+                {t("home.registerText")} {/* ✅ */}
               </p>
               <button
                 onClick={() => setOpenModal(true)}
@@ -93,7 +80,7 @@ const Home = () => {
                            text-green-900 font-bold rounded-lg shadow-md 
                            transition-transform transform hover:scale-105"
               >
-                Register Now
+                {t("home.registerBtn")} {/* ✅ */}
               </button>
             </div>
           </motion.div>

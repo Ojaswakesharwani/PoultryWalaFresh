@@ -1,5 +1,4 @@
 import React from "react";
-
 import Navbar from "./components/layouts/Navbar.jsx";
 import Footer from "./components/layouts/Footer.jsx";
 import Home from "./components/layouts/Home.jsx";
@@ -9,39 +8,47 @@ import About from "./components/layouts/About.jsx";
 import Explore from "./components/layouts/Explore.jsx";
 import Services from "./components/layouts/Services.jsx";
 
+import LanguagePopup from "./components/layouts/languagepopup.jsx"
+import { useTranslation } from "react-i18next";
+
 function App() {
+  const { t } = useTranslation();
+
   return (
     <>
-      {/* Common Navbar (always visible) */}
+      {/* ✅ Language Selector Popup */}
+      <LanguagePopup />
+
+      {/* Common Navbar */}
       <Navbar />
 
       {/* Scrollable sequence of sections */}
       <div id="home">
-        <Home />
+        <Home title={t("welcome")} />
       </div>
 
       <div id="about">
-        <About />
+        <About title={t("about")} />
       </div>
 
       <div id="services">
-        <Services />
+        <Services title={t("services")} />
       </div>
 
       <div id="explore">
-        <Explore />
+        <Explore title={t("explore")} />
       </div>
 
       <div id="future">
-        <Future />
+        <Future title={t("future")} />
       </div>
 
       <div id="presence">
-        <Presence />
+        <Presence title={t("presence")} />
       </div>
 
-      {/* Common Footer (always visible) */}
-      <Footer />
+      {/* Common Footer */}
+      <Footer text={t("footer")} />
     </>
   );
 }
