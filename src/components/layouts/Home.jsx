@@ -12,7 +12,7 @@ const Home = () => {
   const closeModal = () => setOpenModal(false);  
 
   return (
-    <section id="home-section" className="relative w-full max-h-screen px-5 py-12 min-h-full height-screen overflow-hidden">
+    <section id="home-section" className="relative w-full min-h-full height-screen overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0"
