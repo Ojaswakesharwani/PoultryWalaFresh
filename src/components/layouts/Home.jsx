@@ -78,7 +78,7 @@ const Home = () => {
                 onClick={() => setOpenModal(true)}
                 className="inline-block px-10 py-4 bg-yellow-400 hover:bg-yellow-500 
                            text-green-900 font-bold rounded-lg shadow-md 
-                           transition-transform transform hover:scale-105 mr-4"
+                           transition-transform transform hover:scale-105 mr-3"
               >
                 {t("home.registerBtn")} {/* ✅ */}
               </button>
@@ -86,7 +86,7 @@ const Home = () => {
                 onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.poultrywala.app'} // Link to Google Play
                 className="inline-block px-10 py-4 bg-green-600 hover:bg-green-700 
                            text-green-900 hover:text-green-950 font-bold rounded-lg shadow-md 
-                           transition-transform transform hover:scale-105 ml-4"
+                           transition-transform transform hover:scale-105 ml-3"
               >
                 {t("home.appBtn")} {/* ✅ */}
               </button>
@@ -111,7 +111,6 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="w-full h-full object-cover rounded-xl opacity-100 z-100"
               autoPlay
-              // muted
               loop
               playsInline
             >
