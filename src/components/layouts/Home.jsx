@@ -12,7 +12,7 @@ const Home = () => {
   const closeModal = () => setOpenModal(false);  
 
   return (
-    <section id="home-section" className="relative w-full min-h-full height-screen overflow-hidden">
+    <section id="home-section" className="relative w-full min-h-full flex flex-col justify-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0"
@@ -70,17 +70,25 @@ const Home = () => {
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             className="mt-8"
           >
-            <div className="mt-6">
-              <p className="text-gray-200 text-lg font-medium mb-3">
+            <div className="mt-6 mb-13">
+              <p className="text-gray-200 text-lg font-medium mb-3 pb-10">
                 {t("home.registerText")} {/* ✅ */}
               </p>
               <button
                 onClick={() => setOpenModal(true)}
                 className="inline-block px-10 py-4 bg-yellow-400 hover:bg-yellow-500 
                            text-green-900 font-bold rounded-lg shadow-md 
-                           transition-transform transform hover:scale-105"
+                           transition-transform transform hover:scale-105 mr-4"
               >
                 {t("home.registerBtn")} {/* ✅ */}
+              </button>
+              <button
+                onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.poultrywala.app'} // Link to Google Play
+                className="inline-block px-10 py-4 bg-green-600 hover:bg-green-700 
+                           text-green-900 hover:text-green-950 font-bold rounded-lg shadow-md 
+                           transition-transform transform hover:scale-105 ml-4"
+              >
+                {t("home.appBtn")} {/* ✅ */}
               </button>
             </div>
           </motion.div>
@@ -103,7 +111,7 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="w-full h-full object-cover rounded-xl opacity-100 z-100"
               autoPlay
-              muted
+              // muted
               loop
               playsInline
             >

@@ -26,6 +26,7 @@ i18n
               "India’s first organized B2B platform for contract broiler trading – Connecting verified poultry traders.",
             registerText: "For getting latest updates, register yourself:",
             registerBtn: "Register Now",
+            appBtn: "Get App"
           },
           about: {
             heading: "About Us",
@@ -121,7 +122,7 @@ i18n
         { name: "Rahul Sharma", rating: "4.5" },
         { name: "Priya Verma", rating: "5.0" }
       ],
-      presence_title: "10K+ Downloads on Android & iOS",
+      presence_title: "Comming Soon Our Android App",
       presence_realtime: "Real Time Trading",
       presence_verified: "Verified Profiles",
       presence_online: "Online Profiles",
@@ -151,6 +152,35 @@ i18n
       footer_enquiry_section: "Enquiry Section",
       footer_traders_contract: "For Traders and Contract Companies",
       footer_rights: "© 2025 Poultrywala | All Rights Reserved",
+
+      "future_reviews": {
+          "0": {
+            "name": "Ramesh Yadav ",
+            "fullReview": "Very good service, now it is easier to sell eggs and chickens.",
+            "info": "Village Poultry Farmer, Uttar Pradesh"
+          },
+          "1": {
+            "name": "Savitri Devi ",
+            "fullReview": "Earlier we had to go to the market, now we are directly connected to buyers online.",
+            "info": "Poultry Farm Owner, Maharashtra"
+          },
+          "2": {
+            "name": "Hari Singh ",
+            "fullReview": "This helps me understand rates and demand, very beneficial for my farm.",
+            "info": "Dairy & Poultry Farmer, Punjab"
+          },
+          "3": {
+            "name": "Lakhan Lal ",
+            "fullReview": "We get payments on time and everything is transparent, I am very satisfied.",
+            "info": "Poultry Farmer, Bihar"
+          },
+          "4": {
+            "name": "Meena Bai ",
+            "fullReview": "Now the selling process has become easier and safer.",
+            "info": "Village Woman Farmer, Madhya Pradesh"
+          }
+        },
+        
 
        
            navbar: {
@@ -187,6 +217,7 @@ i18n
               "भारत का पहला संगठित B2B प्लेटफॉर्म कॉन्ट्रैक्ट ब्रॉयलर ट्रेडिंग के लिए – सत्यापित पोल्ट्री व्यापारियों को जोड़ना।",
             registerText: "नवीनतम अपडेट पाने के लिए, पंजीकरण करें:",
             registerBtn: "अभी रजिस्टर करें",
+            appBtn: "ऐप प्राप्त करें"
           },
           about: {
             heading: "हमारे बारे में",
@@ -281,7 +312,7 @@ i18n
         { name: "राहुल शर्मा", rating: "4.5" },
         { name: "प्रिया वर्मा", rating: "5.0" }
       ],
-      presence_title: "10K+ डाउनलोड Android और iOS पर",
+      presence_title: "हमारा एंड्रॉइड ऐप जल्दी ही आ रहा है!",
       presence_realtime: "रियल टाइम ट्रेडिंग",
       presence_verified: "वेरिफाइड प्रोफाइल",
       presence_online: "ऑनलाइन प्रोफाइल",
@@ -311,6 +342,34 @@ i18n
       footer_enquiry_section: "पूछताछ अनुभाग",
       footer_traders_contract: "व्यापारियों और अनुबंध कंपनियों के लिए",
       footer_rights: "© 2025 पोल्ट्रीवाला | सर्वाधिकार सुरक्षित",
+      "future_reviews": {
+          "0": {
+            "name": "रामेश यादव ",
+            "fullReview": "बहुत अच्छी सेवा है, अब अंडे और मुर्गे बेचना आसान हो गया है।",
+            "info": "गाँव के पोल्ट्री किसान, उत्तर प्रदेश"
+          },
+          "1": {
+            "name": "सावित्री देवी ",
+            "fullReview": "पहले हमें बाजार जाना पड़ता था, अब सीधे ऑनलाइन खरीदार से जुड़ गए हैं।",
+            "info": "पोल्ट्री फ़ार्म मालिक, महाराष्ट्र"
+          },
+          "2": {
+            "name": "हरी सिंह ",
+            "fullReview": "रेट और मांग समझने में मदद मिलती है, फार्म के लिए बहुत फायदेमंद है।",
+            "info": "डेयरी और पोल्ट्री किसान, पंजाब"
+          },
+          "3": {
+            "name": "लखन लाल ",
+            "fullReview": "समय पर भुगतान मिलता है और सब कुछ पारदर्शी है, हम बहुत खुश हैं।",
+            "info": "पोल्ट्री किसान, बिहार"
+          },
+          "4": {
+            "name": "मीना बाई ",
+            "fullReview": "अब बेचने की प्रक्रिया आसान और सुरक्षित हो गई है।",
+            "info": "गाँव की महिला किसान, मध्य प्रदेश"
+          }
+        },
+        
 
           navbar: {
             home: "होम",
@@ -343,6 +402,7 @@ i18n
               "भारताचे पहिले संघटित B2B प्लॅटफॉर्म कॉन्ट्रॅक्ट ब्रॉयलर ट्रेडिंगसाठी – प्रमाणित पोल्ट्री व्यापार्‍यांना जोडणारे.",
             registerText: "नवीनतम अपडेट मिळवण्यासाठी, नोंदणी करा:",
             registerBtn: "आत्ता नोंदणी करा",
+            appBtn: "अॅप मिळवा"
           },
           about: {
             heading: "आमच्याबद्दल",
@@ -437,7 +497,7 @@ i18n
          { name: "राहुल शर्मा", rating: "4.5" },
          { name: "प्रिया वर्मा", rating: "5.0" }
        ],
-       presence_title: "10K+ डाऊनलोड्स Android आणि iOS वर",
+       presence_title: "आमचं अँड्रॉइड अ‍ॅप लवकरच येत आहे!",
        presence_realtime: "रिअल टाइम ट्रेडिंग",
        presence_verified: "प्रमाणित प्रोफाइल",
        presence_online: "ऑनलाइन प्रोफाइल",
@@ -467,6 +527,36 @@ i18n
        footer_enquiry_section: "चौकशी विभाग",
        footer_traders_contract: "व्यापारी आणि करार कंपन्यांसाठी",
        footer_rights: "© 2025 पोल्ट्रीवाला | सर्व हक्क राखीव",
+
+
+       "future_reviews": {
+          "0": {
+            "name": "रामेश यादव",
+            "fullReview": "खूप चांगली सेवा आहे, आता अंडी आणि कोंबडी विकणे सोपे झाले आहे.",
+            "info": "गावातील पोल्ट्री शेतकरी, उत्तर प्रदेश"
+          },
+          "1": {
+            "name": "सावित्री देवी",
+            "fullReview": "आधी आम्हाला बाजारात जावे लागायचे, आता थेट खरेदीदारांशी ऑनलाइन जोडले गेलो आहोत.",
+            "info": "पोल्ट्री फार्म मालक, महाराष्ट्र"
+          },
+          "2": {
+            "name": "हरी सिंह ",
+            "fullReview": "दर आणि मागणी समजायला मदत होते, शेतासाठी खूप फायदेशीर आहे.",
+            "info": "दुग्ध व पोल्ट्री शेतकरी, पंजाब"
+          },
+          "3": {
+            "name": "लखन लाल",
+            "fullReview": "वेळेवर पैसे मिळतात आणि सर्व काही पारदर्शक आहे, आम्ही खूप समाधानी आहोत.",
+            "info": "पोल्ट्री शेतकरी, बिहार"
+          },
+          "4": {
+            "name": "मीना बाई",
+            "fullReview": "आता विक्रीची प्रक्रिया सोपी आणि सुरक्षित झाली आहे.",
+            "info": "गावातील महिला शेतकरी, मध्य प्रदेश"
+          }
+        },
+        
 
       
            navbar: {

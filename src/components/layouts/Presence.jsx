@@ -5,7 +5,7 @@ import { MdReviews, MdOutlineRealEstateAgent } from "react-icons/md";
 import { IoMdPerson } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 
-import img from "../../assets/App.png";
+// import img from "../../assets/App.png";
 import pic from "../../assets/Appplay.png";
 
 const Presence = () => {
@@ -82,13 +82,13 @@ const Presence = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 flex justify-center gap-6"
           >
-            <div className="relative p-3 rounded-2xl shadow-lg bg-white w-1/2 max-w-xs hover:scale-105 transition-transform">
+            {/* <div className="relative p-3 rounded-2xl shadow-lg bg-white w-1/2 max-w-xs hover:scale-105 transition-transform">
               <img
                 src={img}
                 className="w-full h-auto object-contain rounded-lg"
                 alt="App preview"
               />
-            </div>
+            </div> */}
             <div className="relative p-3 rounded-2xl shadow-lg bg-white w-1/2 max-w-xs hover:scale-105 transition-transform">
               <img
                 src={pic}

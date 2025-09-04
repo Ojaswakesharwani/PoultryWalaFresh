@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const statesWithCities = {
-  "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi"],
+  MadhyaPradesh: ["Bhopal", "Indore", "Jabalpur"],
   Maharashtra: ["Mumbai", "Pune", "Nagpur"],
-  Delhi: ["New Delhi", "Dwarka", "Rohini"],
-  Bihar: ["Patna", "Gaya", "Bhagalpur"],
-  Punjab: ["Amritsar", "Ludhiana", "Jalandhar"],
+  Gujarat: ["Ahmedabad", "Surat", "Vadodara"],
 };
 
 function Registration() {
@@ -23,12 +21,45 @@ function Registration() {
 
   const [loading, setLoading] = useState(false);
 
+  // ✅ validation function
+  const validateForm = () => {
+    if (!formData.Name.trim()) {
+      alert("Name is required");
+      return false;
+    }
+    if (!/^[0-9]{10}$/.test(formData.Phone)) {
+      alert("Phone must be a valid 10-digit number");
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(formData.Email)) {
+      alert("Invalid email address");
+      return false;
+    }
+    if (!formData.State) {
+      alert("Please select a State");
+      return false;
+    }
+    if (!formData.City.trim()) {
+      alert("City is required");
+      return false;
+    }
+    if (!formData.Role) {
+      alert("Please select a Role");
+      return false;
+    }
+    return true;
+  };
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // ✅ Run validation before sending
+    if (!validateForm()) return;
+
     setLoading(true);
 
     const data = {
@@ -129,22 +160,15 @@ function Registration() {
         </select>
 
         {/* City */}
-        <select
+        <input
           name="City"
+          type="text"
           value={formData.City}
           onChange={handleChange}
+          placeholder={t("registration_city")}
           required
-          disabled={!formData.State}
           className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-green-500"
-        >
-          <option value="">{t("registration_city")}</option>
-          {formData.State &&
-            statesWithCities[formData.State].map((ct) => (
-              <option key={ct} value={ct}>
-                {ct}
-              </option>
-            ))}
-        </select>
+        />
 
         {/* Role */}
         <select

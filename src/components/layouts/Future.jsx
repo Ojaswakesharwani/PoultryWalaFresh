@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaCheckCircle, FaStar } from "react-icons/fa";
-import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -27,33 +26,46 @@ const ReviewsSection = () => {
     t("future_steps.track"),
   ];
 
+  // ✅ Farmers with realistic pics + i18n strings
   const reviews = [
     {
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      img: "https://images.unsplash.com/photo-1749367494185-a41c68e8a8cb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aW5kaWFuJTIwcG91bHRyeSUyMGZhcm1lcnxlbnwwfHwwfHx8MA%3D%3D", // Indian farmer
       name: t("future_reviews.0.name"),
-      rating: t("future_reviews.0.rating"),
+      rating: "4.5",
+      fullReview: t("future_reviews.0.fullReview"),
+      info: t("future_reviews.0.info"),
     },
     {
-      img: "https://randomuser.me/api/portraits/women/68.jpg",
+      img: "https://plus.unsplash.com/premium_photo-1718570264200-d5b480d0afcd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA0fHxpbmRpYW4lMjBwb3VsdHJ5JTIwZmFybWVyfGVufDB8fDB8fHww", // Poultry farmer
       name: t("future_reviews.1.name"),
-      rating: t("future_reviews.1.rating"),
+      rating: "4.7",
+      fullReview: t("future_reviews.1.fullReview"),
+      info: t("future_reviews.1.info"),
     },
     {
-      img: "https://randomuser.me/api/portraits/men/20.jpg",
+      img: "https://plus.unsplash.com/premium_photo-1753983550028-b967712baaaf?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGluZGlhbiUyMHBvdWx0cnklMjBmYXJtZXJ8ZW58MHx8MHx8fDA%3D", // Dairy village farmer
       name: t("future_reviews.2.name"),
-      rating: t("future_reviews.2.rating"),
+      rating: "4.2",
+      fullReview: t("future_reviews.2.fullReview"),
+      info: t("future_reviews.2.info"),
     },
     {
-      img: "https://randomuser.me/api/portraits/men/12.jpg",
+      img: "https://images.unsplash.com/photo-1640677114404-35eaffa961f6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGluZGlhbiUyMHBvdWx0cnklMjBmYXJtZXJ8ZW58MHx8MHx8fDA%3D", // Farmer with hens
       name: t("future_reviews.3.name"),
-      rating: t("future_reviews.3.rating"),
+      rating: "4.8",
+      fullReview: t("future_reviews.3.fullReview"),
+      info: t("future_reviews.3.info"),
     },
     {
-      img: "https://randomuser.me/api/portraits/women/33.jpg",
+      img: "https://plus.unsplash.com/premium_photo-1718570264126-48594b527c85?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQwfHxpbmRpYW4lMjBwb3VsdHJ5JTIwZmFybWVyfGVufDB8fDB8fHww", // Village woman farmer
       name: t("future_reviews.4.name"),
-      rating: t("future_reviews.4.rating"),
+      rating: "4.6",
+      fullReview: t("future_reviews.4.fullReview"),
+      info: t("future_reviews.4.info"),
     },
   ];
+
+  const [selectedReview, setSelectedReview] = useState(reviews[0]);
 
   return (
     <motion.section
@@ -111,28 +123,26 @@ const ReviewsSection = () => {
       >
         {/* Highlight Card */}
         <motion.div
-          className="bg-green-700/90 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center hover:scale-105 transition-transform"
+          className="bg-green-700/90 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center"
           variants={itemVariants}
         >
           <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
-            alt="Profile"
-            className="w-28 h-28 rounded-full mb-4 border-4 border-yellow-400 shadow-xl"
+            src={selectedReview.img}
+            alt={selectedReview.name}
+            className="w-32 h-32 rounded-full mb-4 border-4 border-yellow-400 shadow-xl object-cover"
           />
           <div className="flex items-center gap-1">
-            <span className="text-3xl font-bold">4.3</span>
+            <span className="text-3xl font-bold">{selectedReview.rating}</span>
             <FaStar className="text-yellow-400 text-2xl" />
           </div>
-          <p className="mt-1 text-yellow-100">433 {t("future_reviews_count")}</p>
-
-          <h3 className="font-bold text-yellow-300 mt-5 text-lg">
-            {t("future_highlight_name")}
+          <h3 className="font-bold text-yellow-300 mt-4 text-lg">
+            {selectedReview.name}
           </h3>
-          <p className="text-sm text-yellow-100 mt-2 text-center italic">
-            {t("future_highlight_review")}
+          <p className="text-sm text-yellow-100 mt-3 text-center italic leading-relaxed">
+            “{selectedReview.fullReview}”
           </p>
           <p className="text-yellow-200 text-xs mt-3 text-center">
-            {t("future_highlight_info")}
+            {selectedReview.info}
           </p>
         </motion.div>
 
@@ -144,23 +154,40 @@ const ReviewsSection = () => {
           {reviews.map((review, idx) => (
             <motion.div
               key={idx}
-              className="bg-white border border-green-600 p-4 rounded-xl flex items-center justify-between shadow hover:shadow-md hover:bg-green-700/80 transition-all"
+              className={`p-4 rounded-xl flex items-center gap-4 shadow cursor-pointer transition-all border 
+              ${
+                selectedReview.name === review.name
+                  ? "bg-green-700/90 border-yellow-400"
+                  : "bg-white border-green-600 hover:bg-green-100"
+              }`}
+              onClick={() => setSelectedReview(review)}
               variants={itemVariants}
             >
-              <div className="flex items-center gap-4">
-                <img
-                  src={review.img}
-                  alt={review.name}
-                  className="w-14 h-14 rounded-full border-2 border-green-400"
-                />
-                <div>
-                  <p className="font-semibold text-green-900">{review.name}</p>
-                  <p className="text-sm text-yellow-300 font-medium">
-                    {review.rating} ★
-                  </p>
-                </div>
+              <img
+                src={review.img}
+                alt={review.name}
+                className="w-14 h-14 rounded-full border-2 border-green-400 object-cover"
+              />
+              <div>
+                <p
+                  className={`font-semibold ${
+                    selectedReview.name === review.name
+                      ? "text-white"
+                      : "text-green-900"
+                  }`}
+                >
+                  {review.name}
+                </p>
+                <p
+                  className={`text-sm font-medium ${
+                    selectedReview.name === review.name
+                      ? "text-yellow-200"
+                      : "text-yellow-600"
+                  }`}
+                >
+                  {review.rating} ★
+                </p>
               </div>
-              <BsArrowRight className="text-green-900 text-xl" />
             </motion.div>
           ))}
         </motion.div>
