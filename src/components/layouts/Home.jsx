@@ -76,7 +76,7 @@ const Home = () => {
               </p>
               <button
                 onClick={() => setOpenModal(true)}
-                className="inline-block px-10 py-4 bg-yellow-400 hover:bg-yellow-500 
+                className="inline-block px-8 py-4 bg-yellow-400 hover:bg-yellow-500 
                            text-green-900 font-bold rounded-lg shadow-md 
                            transition-transform transform hover:scale-105 mr-3"
               >
@@ -84,7 +84,7 @@ const Home = () => {
               </button>
               <button
                 onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=com.poultrywala.app'} // Link to Google Play
-                className="inline-block px-10 py-4 bg-green-600 hover:bg-green-700 
+                className="inline-block px-8 py-4 bg-green-600 hover:bg-green-700 
                            text-green-900 hover:text-green-950 font-bold rounded-lg shadow-md 
                            transition-transform transform hover:scale-105 ml-3"
               >
