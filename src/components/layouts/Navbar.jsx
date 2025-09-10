@@ -30,7 +30,6 @@ const Navbar = () => {
               alt="Poultrywala icon"
               className="w-full h-12 object-contain"
             />
-            {/* <img src={logo} alt="Poultrywala logo" className="h-6 sm:h-8 md:h-9 object-contain" /> */}
           </div>
         </div>
 

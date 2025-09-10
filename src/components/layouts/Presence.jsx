@@ -82,13 +82,7 @@ const Presence = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 flex justify-center gap-6"
           >
-            {/* <div className="relative p-3 rounded-2xl shadow-lg bg-white w-1/2 max-w-xs hover:scale-105 transition-transform">
-              <img
-                src={img}
-                className="w-full h-auto object-contain rounded-lg"
-                alt="App preview"
-              />
-            </div> */}
+    
             <div className="relative p-3 rounded-2xl shadow-lg bg-white w-1/2 max-w-xs hover:scale-105 transition-transform">
               <img
                 src={pic}
