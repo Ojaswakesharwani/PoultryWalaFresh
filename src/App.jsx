@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      {/* ✅ Language Selector Popup */}
+      {/*  Language Selector Popup */}
       <LanguagePopup />
 
       {/* Common Navbar */}
